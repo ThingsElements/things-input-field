@@ -297,9 +297,7 @@ Copyright © HatioLab Inc. All rights reserved.
        * hidden값이 변경되었을 경우
        *******/
       _hiddenChanged: function(hidden) {
-        if(hidden) {
-          this.hideLabel = true;
-        }
+          this.hideLabel = (typeof hidden === 'undefined' || hidden == null) ? false : hidden;
       },
 
       /**
